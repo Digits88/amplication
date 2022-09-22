@@ -12,7 +12,7 @@ import {
   DEFAULT_BUILDS_FOLDER
 } from '../../../../constants';
 import { AmplicationError } from '../../../../errors/AmplicationError';
-import { Logger } from 'winston';
+
 @Injectable()
 export class BuildFilesSaver {
   private baseBuildsPath: string;
