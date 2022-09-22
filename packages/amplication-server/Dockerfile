@@ -19,6 +19,7 @@ COPY packages/amplication-data-service-generator packages/amplication-data-servi
 COPY packages/amplication-git-service packages/amplication-git-service
 COPY packages/amplication-prisma-db packages/amplication-prisma-db
 COPY packages/amplication-kafka packages/amplication-kafka
+COPY packages/amplication-kafka packages/amplication-nest-logger-module
 
 # Installs all copied package node_modules ; Preparation for build
 RUN npm run bootstrap -- --scope @amplication/server --include-dependencies
