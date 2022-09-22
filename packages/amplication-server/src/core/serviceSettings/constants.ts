@@ -1,12 +1,13 @@
 import { ServiceSettings } from './dto';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
+import { EnumBlockType } from '../../enums/EnumBlockType';
 import { EnumAuthProviderType } from './dto/EnumAuthenticationProviderType';
 import { BlockValues, BlockValuesExtended } from '../block/types';
 
 export type ServiceSettingsValues = BlockValues<ServiceSettingsValuesExtended>;
 
-export type ServiceSettingsValuesExtended = BlockValuesExtended<
-  ServiceSettings
+export type ServiceSettingsValuesExtended = Omit<
+  BlockValuesExtended<ServiceSettings>,
+  'id'
 >;
 
 export const DEFAULT_SERVICE_SETTINGS: ServiceSettingsValuesExtended = {

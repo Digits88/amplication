@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BlockService } from 'src/core/block/block.service';
+import { BlockService } from '../block/block.service';
 import { ConnectorRestApiCallService } from './connectorRestApiCall.service';
 import { ConnectorRestApiCall } from './dto';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
-import { User } from 'src/models';
+import { EnumBlockType } from '../../enums/EnumBlockType';
+import { User } from '../../models';
 
 const EXAMPLE_INPUT_PARAMETERS = [];
 const EXAMPLE_OUTPUT_PARAMETERS = [];
@@ -38,7 +38,8 @@ const EXAMPLE_CONNECTOR_REST_API_CALL: ConnectorRestApiCall = {
   displayName: EXAMPLE_NAME,
   parentBlock: null,
   url: EXAMPLE_URL,
-  versionNumber: 0
+  versionNumber: 0,
+  resourceId: EXAMPLE_RESOURCE_ID
 };
 
 const EXAMPLE_CONNECTOR_REST_API_CALLS = [EXAMPLE_CONNECTOR_REST_API_CALL];

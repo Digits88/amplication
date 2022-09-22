@@ -1,14 +1,14 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { FindOneArgs } from 'src/dto';
-import { IBlock, User } from 'src/models';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
+import { Injectable } from '@nestjs/common';
+import { FindOneArgs } from '../../dto';
+import { IBlock, User } from '../../models';
+import { EnumBlockType } from '../../enums/EnumBlockType';
 import { BlockService } from '../block/block.service';
 import {
   CreateBlockArgs,
   FindManyBlockTypeArgs,
   UpdateBlockArgs
 } from '../block/dto';
-import { UserEntity } from 'src/decorators/user.decorator';
+import { UserEntity } from '../../decorators/user.decorator';
 @Injectable()
 export abstract class BlockTypeService<
   T extends IBlock,
@@ -18,8 +18,7 @@ export abstract class BlockTypeService<
 > {
   abstract blockType: EnumBlockType;
 
-  @Inject()
-  private readonly blockService: BlockService;
+  constructor(protected readonly blockService: BlockService) {}
 
   async findOne(args: FindOneArgs): Promise<T | null> {
     return this.blockService.findOne<T>(args);

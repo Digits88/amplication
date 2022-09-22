@@ -11,11 +11,11 @@ import {
 import { MorganInterceptor } from 'nest-morgan';
 import { Response } from 'express';
 import { AuthService, AuthUser } from './auth.service';
-import { GithubAuthExceptionFilter } from 'src/filters/github-auth-exception.filter';
 import {
   AMPLICATION_LOGGER_PROVIDER,
   AmplicationLogger
 } from '@amplication/nest-logger-module';
+import { GithubAuthExceptionFilter } from '../../filters/github-auth-exception.filter';
 import { GitHubAuthGuard } from './github.guard';
 import { GitHubRequest } from './types';
 import { stringifyUrl } from 'query-string';

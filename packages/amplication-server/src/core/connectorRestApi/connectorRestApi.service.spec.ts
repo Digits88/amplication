@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BlockService } from 'src/core/block/block.service';
+import { BlockService } from '../block/block.service';
 import { ConnectorRestApiService } from './connectorRestApi.service';
 import {
   ConnectorRestApi,
   EnumConnectorRestApiAuthenticationType
 } from './dto';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
-import { User } from 'src/models';
+import { EnumBlockType } from '../../enums/EnumBlockType';
+import { User } from '../../models';
 
 const EXAMPLE_INPUT_PARAMETERS = [];
 const EXAMPLE_OUTPUT_PARAMETERS = [];
@@ -42,7 +42,8 @@ const EXAMPLE_CONNECTOR_REST_API_CALL: ConnectorRestApi = {
   versionNumber: 0,
   authenticationType: EnumConnectorRestApiAuthenticationType.None,
   privateKeyAuthenticationSettings: null,
-  httpBasicAuthenticationSettings: null
+  httpBasicAuthenticationSettings: null,
+  resourceId: EXAMPLE_RESOURCE_ID
 };
 
 const EXAMPLE_CONNECTOR_REST_API_CALLS = [EXAMPLE_CONNECTOR_REST_API_CALL];

@@ -8,8 +8,8 @@ import {
   createTestClient
 } from 'apollo-server-testing';
 import { AMPLICATION_LOGGER_PROVIDER } from '@amplication/nest-logger-module';
-import { GqlAuthGuard } from 'src/guards/gql-auth.guard';
-import { Account, Auth, User } from 'src/models';
+import { GqlAuthGuard } from '../../guards/gql-auth.guard';
+import { Account, Auth, User } from '../../models';
 import { mockGqlAuthGuardCanActivate } from '../../../test/gql-auth-mock';
 import { AuthResolver } from './auth.resolver';
 import { AuthService } from './auth.service';

@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BlockService } from 'src/core/block/block.service';
+import { BlockService } from '../block/block.service';
 import { EntityPageService } from './entityPage.service';
 import { EntityService } from '../entity/entity.service';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
+import { EnumBlockType } from '../../enums/EnumBlockType';
 import { EntityPageSingleRecordSettings } from './dto/EntityPageSingleRecordSettings';
 import { EntityPageListSettings } from './dto/EntityPageListSettings';
 import { JsonValue } from 'type-fest';
 import { EnumEntityPageType } from './dto/EnumEntityPageType';
 import { EntityPage } from './dto/EntityPage';
 import { EntityPageCreateInput } from './dto/EntityPageCreateInput';
-import { User } from 'src/models';
+import { User } from '../../models';
 
 const EXAMPLE_INPUT_PARAMETERS = [];
 const EXAMPLE_OUTPUT_PARAMETERS = [];
@@ -65,7 +65,8 @@ const EXAMPLE_SINGLE_RECORD_ENTITY_PAGE: EntityPage = {
   pageType: EnumEntityPageType.SingleRecord,
   listSettings: null,
   singleRecordSettings: EXAMPLE_SINGLE_RECORD_SETTINGS,
-  showAllFields: true
+  showAllFields: true,
+  resourceId: EXAMPLE_RESOURCE_ID
 };
 
 const EXAMPLE_LIST_ENTITY_PAGE: EntityPage = {
@@ -82,7 +83,8 @@ const EXAMPLE_LIST_ENTITY_PAGE: EntityPage = {
   entityId: EXAMPLE_ENTITY_ID,
   pageType: EnumEntityPageType.List,
   listSettings: EXAMPLE_LIST_SETTINGS,
-  showAllFields: true
+  showAllFields: true,
+  resourceId: EXAMPLE_RESOURCE_ID
 };
 
 const SINGLE_RECORD_CREATE_INPUT: EntityPageCreateInput = {

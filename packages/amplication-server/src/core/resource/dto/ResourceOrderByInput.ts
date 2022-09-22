@@ -1,5 +1,5 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { SortOrder } from 'src/enums/SortOrder';
+import { SortOrder } from '../../../enums/SortOrder';
 
 @InputType({
   isAbstract: true
@@ -29,4 +29,9 @@ export class ResourceOrderByInput {
     nullable: true
   })
   description?: SortOrder | null;
+
+  @Field(() => SortOrder, {
+    nullable: true
+  })
+  resourceType?: SortOrder | null;
 }

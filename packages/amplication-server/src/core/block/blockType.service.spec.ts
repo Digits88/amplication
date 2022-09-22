@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BlockTypeService } from './blockType.service';
 import { BlockService } from './block.service';
-import { EnumBlockType } from 'src/enums/EnumBlockType';
-import { IBlock, BlockInputOutput, Block, User } from 'src/models';
+import { EnumBlockType } from '../../enums/EnumBlockType';
+import { IBlock, BlockInputOutput, Block, User } from '../../models';
 import { FindManyBlockTypeArgs, CreateBlockArgs, UpdateBlockArgs } from './dto';
-import { FindOneArgs } from 'src/dto';
+import { FindOneArgs } from '../../dto';
 
 const EXAMPLE_IBLOCK_ID = 'exampleIblockId';
 const EXAMPLE_DISPLAY_NAME = 'exampleDisplayName';
@@ -42,7 +42,8 @@ const EXAMPLE_IBLOCK: IBlock = {
   blockType: EXAMPLE_BLOCK_TYPE,
   versionNumber: EXAMPLE_VERSION_NUMBER,
   inputParameters: [EXAMPLE_BLOCK_INPUT_OUTPUT],
-  outputParameters: [EXAMPLE_BLOCK_INPUT_OUTPUT]
+  outputParameters: [EXAMPLE_BLOCK_INPUT_OUTPUT],
+  resourceId: EXAMPLE_RESOURCE_ID
 };
 
 const EXAMPLE_USER: User = {
