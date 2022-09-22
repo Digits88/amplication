@@ -16,7 +16,6 @@ import { SERVICE_NAME } from './constants';
 import { GoogleSecretsManagerModule } from './services/googleSecretsManager.module';
 import { GoogleSecretsManagerService } from './services/googleSecretsManager.service';
 
-
 @Module({
   imports: [
     ConfigModule.forRoot({
